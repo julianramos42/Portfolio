@@ -5,7 +5,9 @@
     font-size: 0.95rem;
     font-family: Poppins;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     background-color: aliceblue;
     display: flex;
@@ -154,6 +156,7 @@ main {
     position: relative;
     overflow: hidden;
     height: auto;
+    box-shadow: rgb(0, 0, 0) 1px 1px 5px;;
 }
 
 .c-img img {
@@ -225,6 +228,16 @@ main {
     transition: 1s;
 }
 
+.mostrar{
+    padding: 5px;
+}
+
+.mostrar:hover{
+    background-color: #28262F;
+    color: #efefef;
+    transition: 0.5s;
+}
+
 .hide {
     display: none;
 }
@@ -234,7 +247,8 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-bottom: 35px;
+    margin: 35px 15% 35px;
+    transition: linear 1s;
 }
 
 .habilidades {
