@@ -13,10 +13,7 @@
         display: none;
     }
     .responsive{
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
+        display: block;
         margin: auto 0;
         background-color: #28262F;
         color: #efefef;
