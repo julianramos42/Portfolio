@@ -5,10 +5,18 @@ mostrarMas.addEventListener('click', mostrarImagenes);
 
 function mostrarImagenes() {
   hideImg.classList.toggle('show');
-  if (hideImg.classList.contains('show')) {
-    mostrarMas.innerHTML = 'Ver Menos';
-  } else {
-    mostrarMas.innerHTML = 'Ver Más';
+  if(location.pathname == "/index.html") {
+    if(hideImg.classList.contains('show')) {
+      mostrarMas.innerHTML = 'Ver Menos';
+    } else {
+      mostrarMas.innerHTML = 'Ver Más';
+    }
+  }else if(location.pathname == "/en/index.html"){
+    if(hideImg.classList.contains('show')) {
+      mostrarMas.innerHTML = 'Show Less';
+    } else {
+      mostrarMas.innerHTML = 'Show More';
+    }
   }
 }
 
@@ -45,17 +53,30 @@ createApp({
   data() {
     return {
       iconos: [{
-        img: './Imagenes/whatsapp.png',
+        img: '../Imagenes/whatsapp.png',
         link: "https://wa.me/5491150234561?text=Hola%20Julián,%20nos%20interesaría%20que%20trabajes%20con%20nosotros."
       },
       {
-        img: './Imagenes/linkedin.png',
+        img: '../Imagenes/linkedin.png',
         link: 'https://www.linkedin.com/in/julian-ramos42/'
       },
       {
-        img: './Imagenes/github.png',
+        img: '../Imagenes/github.png',
         link: 'https://github.com/julianramos42'
       }]
     }
   }
 }).mount('.icons');
+
+
+var check = document.querySelector(".check");
+check.addEventListener('click', idioma);
+
+function idioma() {
+  let id = check.checked;
+  if (id == true) {
+    location.href = "./en/index.html";
+  } else {
+    location.href = "../index.html";
+  }
+}

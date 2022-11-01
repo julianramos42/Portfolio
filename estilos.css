@@ -5,14 +5,17 @@
     font-size: 0.95rem;
     font-family: Poppins;
 }
-.responsive{
+
+.responsive {
     display: none;
 }
+
 @media screen and (max-width: 899px) {
-    .pagina{
+    .pagina {
         display: none;
     }
-    .responsive{
+
+    .responsive {
         display: block;
         margin: auto 0;
         background-color: #28262F;
@@ -20,7 +23,8 @@
         padding: 50px;
         text-align: center;
     }
-    .responsive h1{
+
+    .responsive h1 {
         text-align: center;
         font-size: 20px;
     }
@@ -88,6 +92,7 @@ header .navbar a {
 
 .buttons {
     display: flex;
+    align-items: center;
 }
 
 .cv {
@@ -105,9 +110,51 @@ header .navbar a {
     color: #28262F;
 }
 
+.idioma {
+    display: flex;
+}
+
+.check {
+    position: relative;
+    width: 50px;
+    margin: 5px;
+}
+
+.check::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    background-color: #333;
+    border-radius: 25px;
+}
+
+.check::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 25px;
+    transition: 0.25s;
+    border: 2px solid #333;
+    box-sizing: border-box;
+}
+
+.check:checked::after {
+    left: 25px;
+    border: 2px solid #00a1ff;
+}
+
+.check:checked::before {
+    background-color: #00a1ff;
+}
+
 .navbar div img {
     width: 30px;
-    height: auto;
+    height: 100%;
+    box-shadow: rgb(161, 94, 94) 1px 1px 5px;
+    border-radius: 30%;
 }
 
 main {
@@ -151,7 +198,7 @@ main {
 }
 
 .sobreMi p {
-    margin: 5px;
+    margin: 8px;
 }
 
 .trabajos {
@@ -180,7 +227,6 @@ main {
     overflow: hidden;
     height: auto;
     box-shadow: rgb(0, 0, 0) 1px 1px 5px;
-    ;
 }
 
 .c-img img {
