@@ -53,15 +53,18 @@ createApp({
   data() {
     return {
       iconos: [{
-        img: '../Imagenes/whatsapp.png',
+        img: './Imagenes/whatsapp.png',
+        imgEN: '../Imagenes/whatsapp.png',
         link: "https://wa.me/5491150234561?text=Hola%20Julián,%20nos%20interesaría%20que%20trabajes%20con%20nosotros."
       },
       {
-        img: '../Imagenes/linkedin.png',
+        img: './Imagenes/linkedin.png',
+        imgEN: '../Imagenes/linkedin.png',
         link: 'https://www.linkedin.com/in/julian-ramos42/'
       },
       {
-        img: '../Imagenes/github.png',
+        img: './Imagenes/github.png',
+        imgEN: '../Imagenes/github.png',
         link: 'https://github.com/julianramos42'
       }]
     }
